@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.8" tiledversion="1.8.2" orientation="orthogonal" renderorder="right-down" width="1" height="1" tilewidth="16" tileheight="16" infinite="0" nextlayerid="2" nextobjectid="1">
+ <tileset firstgid="1" name="objects" tilewidth="16" tileheight="16" tilecount="660" columns="33">
+  <image source="../../../../../Downloads/gfx/objects.png" width="528" height="320"/>
+ </tileset>
+ <layer id="1" name="piece" width="1" height="1">
+  <data encoding="csv">
+134
+</data>
+ </layer>
+</map>

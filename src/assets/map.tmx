@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.8" tiledversion="1.8.2" orientation="orthogonal" renderorder="right-down" width="16" height="16" tilewidth="16" tileheight="16" infinite="0" nextlayerid="7" nextobjectid="1">
+<map version="1.8" tiledversion="1.8.2" orientation="orthogonal" renderorder="right-down" width="16" height="16" tilewidth="16" tileheight="16" infinite="0" nextlayerid="8" nextobjectid="1">
  <editorsettings>
-  <export target="../../../Jeux/Map/map.json" format="json"/>
+  <export format="json"/>
  </editorsettings>
  <tileset firstgid="1" name="Overworld" tilewidth="16" tileheight="16" tilecount="1440" columns="40">
   <image source="../../../../../Downloads/gfx/Overworld.png" width="640" height="576"/>
@@ -107,7 +107,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer id="6" name="foret" width="16" height="16" locked="1">
+ <layer id="6" name="foret" width="16" height="16">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,727,728,727,728,727,728,727,728,
 0,0,0,0,0,0,0,0,727,728,727,728,727,728,727,728,
