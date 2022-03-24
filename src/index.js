@@ -35,8 +35,8 @@ let cursors;
 
        
         nico = this.physics.add.sprite(350, 300, 'nico');
-
         nico.setScale(.1)
+        nico.body.collideWorldBounds=true;
 
     
     }
