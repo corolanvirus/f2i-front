@@ -48,6 +48,8 @@ class MyGame extends Phaser.Scene
         const cursors = this.input.keyboard.createCursorKeys();
 
 
+
+        // voir ici comment ajouter les déplacements
         if (cursors.up.isDown) {
             console.log("je monte")       
         }
