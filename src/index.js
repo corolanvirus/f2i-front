@@ -1,39 +1,75 @@
 import Phaser from 'phaser';
 import NicoStar from './assets/nicostar.png';
 import Map from './assets/ressources/map/map.png';
+import Coin from './assets/piece.png';
 
+
+let map;
+let nico;
+let coin;
 
 class MyGame extends Phaser.Scene
 {
+    
+
     constructor ()
     {
         super();
+       
     }
+
+   
 
     preload ()
     {
 
         this.load.image('nico', NicoStar);
         this.load.image('map', Map);
+        this.load.image('coin', Coin);
     
     }
     create ()
     {
-        const map = this.add.sprite(0,100 , 'map');
-        map.setScale(2,2)
+        // on applique la map de base
+        map = this.add.image('480','300' , 'map');
+        map.setScale(1);
 
-        const nico = this.add.image('400', '300', 'nico');
-        nico.setScale(.1)
+        // le personnage se trouve au spawn
+        nico = this.add.image('300', '360', 'nico');
+        nico.setScale(.1);
 
-        //  This resizes the game world to match the layer dimensions
-        this.tweens.add({
-            y: 850,
-            duration: 2000,
-            ease: "Bounce",
-            yoyo: true,
-            loop: -1,
-            target: nico
-        });
+        coin = this.add.image('840', '620', 'coin');
+        coin.setScale(.1);
+
+    }
+    update ()
+    {
+
+        const cursors = this.input.keyboard.createCursorKeys();
+
+
+        if (cursors.up.isDown) {
+            console.log("je monte")       
+        }
+
+        if(cursors.down.isDown) {
+            console.log("je descend")
+        }
+
+        if (cursors.left.isDown) {
+            console.log("gauche")
+        }
+
+        if(cursors.right.isDown) {
+            console.log("droite")
+        }
+
+        if (cursors.space.isDown) {
+            console.log("attaque")
+        }
+
+        
+
     }
 }
 
@@ -44,6 +80,8 @@ const config = {
     height: 800,
     scene: MyGame,
     pixelArt: true,
+    
+  
     
 };
 
