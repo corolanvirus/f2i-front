@@ -45,6 +45,8 @@ let cursors;
     {
 
 
+        nico.setVelocityX(0);
+        nico.setVelocityY(0);
 
 
         // voir ici comment ajouter les déplacements
@@ -56,16 +58,22 @@ let cursors;
 
         if(cursors.down.isDown) {
             console.log("je descend")
-            nico.setVelocity(100, 0)
+            nico.setVelocity(0, 300)
+
 
         }
 
         if (cursors.left.isDown) {
             console.log("gauche")
+            nico.setVelocity(-300, 0)
+
+
         }
 
         if(cursors.right.isDown) {
             console.log("droite")
+            nico.setVelocity(300, 0)
+
         }
 
         if (cursors.space.isDown) {
@@ -92,7 +100,7 @@ const config = {
     physics: {
         default: 'arcade',
         arcade : {
-            gravity: {y:450}
+            gravity: {y:0}
         }
     }
     
