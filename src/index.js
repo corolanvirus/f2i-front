@@ -1,5 +1,7 @@
 import Phaser from 'phaser';
-import logoImg from './assets/logo.png';
+import NicoStar from './assets/nicostar.png';
+import Map from './assets/ressources/map/map.png';
+
 
 class MyGame extends Phaser.Scene
 {
@@ -10,20 +12,27 @@ class MyGame extends Phaser.Scene
 
     preload ()
     {
-        this.load.image('logo', logoImg);
+
+        this.load.image('nico', NicoStar);
+        this.load.image('map', Map);
+    
     }
-      
     create ()
     {
-        const logo = this.add.image(400, 150, 'logo');
-      
+        const map = this.add.sprite(0,100 , 'map');
+        map.setScale(2,2)
+
+        const nico = this.add.image('400', '300', 'nico');
+        nico.setScale(.1)
+
+        //  This resizes the game world to match the layer dimensions
         this.tweens.add({
-            targets: logo,
-            y: 450,
+            y: 850,
             duration: 2000,
             ease: "Bounce",
             yoyo: true,
-            loop: -1
+            loop: -1,
+            target: nico
         });
     }
 }
@@ -31,9 +40,11 @@ class MyGame extends Phaser.Scene
 const config = {
     type: Phaser.AUTO,
     parent: 'phaser-example',
-    width: 1400,
+    width: 1120,
     height: 800,
-    scene: MyGame
+    scene: MyGame,
+    pixelArt: true,
+    
 };
 
 const game = new Phaser.Game(config);
