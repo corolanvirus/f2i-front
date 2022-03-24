@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.8" tiledversion="1.8.2" orientation="orthogonal" renderorder="right-down" width="1" height="2" tilewidth="16" tileheight="16" infinite="0" nextlayerid="2" nextobjectid="1">
+ <tileset firstgid="1" name="character" tilewidth="16" tileheight="16" tilecount="272" columns="17">
+  <image source="../../../../../Downloads/gfx/character.png" width="272" height="256"/>
+ </tileset>
+ <layer id="1" name="nicostar" width="1" height="2">
+  <data encoding="csv">
+1,
+18
+</data>
+ </layer>
+</map>
