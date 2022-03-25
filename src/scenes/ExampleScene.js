@@ -2,7 +2,7 @@ import Phaser from 'phaser'
 
 
 //composant sous forme de classe
-export default class HelloWorldScene extends Phaser.Scene {
+export default class ExampleScene extends Phaser.Scene {
     constructor() {
         super('hello-world')
     }
